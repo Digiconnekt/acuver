@@ -1,0 +1,6 @@
+.home-blogs .swiper-pagination-fraction,
+.home-blogs .swiper-pagination-custom,
+.home-blogs .swiper-horizontal > .home-blogs .swiper-pagination-bullets,
+.home-blogs .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0 !important;
+}
