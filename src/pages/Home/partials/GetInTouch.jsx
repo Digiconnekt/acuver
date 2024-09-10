@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import GetInTouchForm from "@/components/GetInTouchForm";
+import { fadeInLeft, fadeInRight } from "@/lib/framerMotionHelpers";
 
 const GetInTouch = () => {
   const [openGetInTouchForm, setOpenGetInTouchForm] = useState(false);
@@ -9,17 +11,27 @@ const GetInTouch = () => {
     <>
       <section className="bg-primary py-20">
         <div className="container">
-          <h2 className="text-white text-5xl font-bold text-center">
+          <motion.h2
+            className="text-white text-4xl md:text-5xl font-bold text-center"
+            variants={fadeInLeft(1, 0)}
+            initial="hidden"
+            whileInView="visible"
+          >
             Get In Touch
-          </h2>
-          <div className="text-center mt-10">
+          </motion.h2>
+          <motion.div
+            className="text-center mt-5 md:mt-10"
+            variants={fadeInRight(1, 0)}
+            initial="hidden"
+            whileInView="visible"
+          >
             <Button
               className="bg-white text-primary hover:bg-white/90"
               onClick={() => setOpenGetInTouchForm(true)}
             >
               Get In Touch
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
 

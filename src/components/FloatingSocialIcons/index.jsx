@@ -63,7 +63,7 @@ const FloatingSocialIcons = () => {
             {SOCIAL_MEDIA_LINKS.map((link, i) => (
               <li
                 key={i}
-                className="w-14 h-14 flex items-center justify-center transition-all duration-300 ease-in-out"
+                className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center transition-all duration-300 ease-in-out"
               >
                 <Link to={link.href} className="flex-1" target="_blank">
                   <img
@@ -79,7 +79,7 @@ const FloatingSocialIcons = () => {
 
         <div
           className={cn([
-            "w-14 h-14 rounded-full bg-primary flex items-center justify-center text-white cursor-pointer hover:bg-primary/90 transition-all duration-300 ease-in-out",
+            "w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center text-white cursor-pointer hover:bg-primary/90 transition-all duration-300 ease-in-out",
             show && "mt-5 rotate-45",
           ])}
           onClick={() => setShow(!show)}

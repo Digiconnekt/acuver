@@ -1,6 +1,6 @@
 import "swiper/css";
 import "swiper/css/pagination";
-
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Img1 from "@/assets/images/home/blogs/1.png";
@@ -8,6 +8,7 @@ import Img2 from "@/assets/images/home/blogs/2.png";
 import Img3 from "@/assets/images/home/blogs/3.png";
 import { Autoplay, Pagination } from "swiper/modules";
 import UserImg from "@/assets/images/user-profile.png";
+import { fadeInBottom } from "@/lib/framerMotionHelpers";
 
 const BLOGS_DATA = [
   {
@@ -64,12 +65,22 @@ const Blogs = () => {
   return (
     <>
       <section className="container">
-        <h2 className="text-primary text-4xl font-bold mb-3">
+        <motion.h2
+          className="text-primary text-4xl font-bold mb-3"
+          variants={fadeInBottom(1, 0)}
+          initial="hidden"
+          whileInView="visible"
+        >
           Read the latest
-        </h2>
-        <h3 className="text-secondary text-3xl font-semibold mb-4">
+        </motion.h2>
+        <motion.h3
+          className="text-secondary text-3xl font-semibold mb-4"
+          variants={fadeInBottom(1, 0.25)}
+          initial="hidden"
+          whileInView="visible"
+        >
           from our experts
-        </h3>
+        </motion.h3>
 
         <Swiper
           slidesPerView={1}

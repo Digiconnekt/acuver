@@ -1,12 +1,19 @@
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { fadeInLeft, fadeInRight } from "@/lib/framerMotionHelpers";
 import IBM_STERLING_OMS_IMG from "@/assets/images/home/ibm-sterling-oms.jpg";
 
 const TogetherCostModular = () => {
   return (
     <>
       <section className="container grid grid-cols-12 gap-y-10 lg:gap-10 lg:items-center">
-        <div className="col-span-12 lg:col-span-6 z-40">
-          <h2 className="text-5xl font-bold text-primary leading-tight mb-2">
+        <motion.div
+          className="col-span-12 lg:col-span-6 z-40"
+          variants={fadeInLeft(1, 0)}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-primary md:leading-tight mb-2">
             Together The Cost Effective Modular Offering We Bring
           </h2>
 
@@ -26,15 +33,22 @@ const TogetherCostModular = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-5 max-w-lg">
             <Button className="w-full sm:w-auto">Know More</Button>
           </div>
-        </div>
-        <div className="col-span-12 lg:col-span-6">
-          <img
-            src={IBM_STERLING_OMS_IMG}
-            alt="IBM Sterling OMS"
-            loading="lazy"
-            className="w-full"
-          />
-        </div>
+        </motion.div>
+        <motion.div
+          className="col-span-12 lg:col-span-6"
+          variants={fadeInRight(1, 0)}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <div className="max-w-lg lg:max-w-full w-full mx-auto">
+            <img
+              src={IBM_STERLING_OMS_IMG}
+              alt="IBM Sterling OMS"
+              loading="lazy"
+              className="w-full"
+            />
+          </div>
+        </motion.div>
       </section>
     </>
   );

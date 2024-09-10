@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 
+import { motion } from "framer-motion";
 import UserImg from "@/assets/images/user-profile.png";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { fadeInBottom } from "@/lib/framerMotionHelpers";
 import QuotesIcon from "@/assets/images/home/what-client-says/quotes.png";
 import StarFullIcon from "@/assets/images/home/what-client-says/starFull.png";
 import StarHalfIcon from "@/assets/images/home/what-client-says/starHalf.png";
@@ -83,9 +85,14 @@ const WhatOurClientSays = () => {
   return (
     <>
       <section className="container">
-        <h2 className="text-primary text-4xl font-bold mb-3 text-center max-w-md mx-auto leading-tight">
+        <motion.h2
+          className="text-primary text-4xl font-bold mb-3 text-center max-w-md mx-auto leading-tight"
+          variants={fadeInBottom(1, 0)}
+          initial="hidden"
+          whileInView="visible"
+        >
           Listen to What Our Clients Say About Us?
-        </h2>
+        </motion.h2>
 
         <div className="relative mt-10">
           <div className="relative w-28 h-28 mx-auto">

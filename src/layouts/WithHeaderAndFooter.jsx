@@ -13,7 +13,7 @@ const WithHeaderAndFooterLayout = () => {
     <>
       <Header />
 
-      <main className="space-y-32">
+      <main className="-mt-[80px] space-y-24 md:space-y-32 overflow-x-hidden">
         <Outlet />
       </main>
 

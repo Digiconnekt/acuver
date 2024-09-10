@@ -6,16 +6,6 @@ const LINKS = [
   {
     name: "About Us",
     href: "/about-us",
-    subLinks: [
-      {
-        name: "About 1",
-        href: "/about-us/about-1",
-      },
-      {
-        name: "About 2",
-        href: "/about-us/about-2",
-      },
-    ],
   },
   {
     name: "Services",
