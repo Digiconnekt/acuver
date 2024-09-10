@@ -1,4 +1,4 @@
-import "@/app.css";
+import "@/App.css";
 import "@/index.css";
 import router from "@/router";
 import { StrictMode } from "react";
