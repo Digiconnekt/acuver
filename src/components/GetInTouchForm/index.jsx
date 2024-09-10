@@ -25,7 +25,9 @@ const GetInTouchForm = ({ open, setOpen }) => {
             <DialogDescription>
               <div className="grid grid-cols-12 gap-5">
                 <div className="col-span-12">
-                  <Label htmlFor="name">Name *</Label>
+                  <Label htmlFor="name" className="block text-left">
+                    Name *
+                  </Label>
                   <Input
                     id="name"
                     className="w-full mt-1"
@@ -33,7 +35,9 @@ const GetInTouchForm = ({ open, setOpen }) => {
                   />
                 </div>
                 <div className="col-span-12">
-                  <Label htmlFor="name">Email *</Label>
+                  <Label htmlFor="email" className="block text-left">
+                    Email *
+                  </Label>
                   <Input
                     id="email"
                     type="email"
@@ -42,7 +46,9 @@ const GetInTouchForm = ({ open, setOpen }) => {
                   />
                 </div>
                 <div className="col-span-12">
-                  <Label htmlFor="name">Mobile *</Label>
+                  <Label htmlFor="mobile" className="block text-left">
+                    Mobile *
+                  </Label>
                   <Input
                     id="mobile"
                     className="w-full mt-1"
